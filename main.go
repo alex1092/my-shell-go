@@ -6,7 +6,6 @@ import (
 	"os/exec"
 	"path/filepath"
 	"strings"
-
 	"github.com/c-bata/go-prompt"
 )
 
@@ -50,10 +49,6 @@ func executor(in string) {
 }
 
 func completer(d prompt.Document) []prompt.Suggest {
-	word := d.GetWordBeforeCursor()
-	if word == "" {
-		return nil
-	}
 	s := []prompt.Suggest{
 		{Text: "exit", Description: "Exit the shell"},
 		{Text: "pwd", Description: "Print working directory"},
